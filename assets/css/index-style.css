@@ -1,0 +1,138 @@
+.navbar {
+    height: 100px;
+    padding: 0 20px;
+}
+.navbar .nav-logo img{
+    width: 220px;
+}
+.nav-items {
+    
+}
+.nav-items .search-box{
+    border: 2px solid #e2c743;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 0px auto 0px;
+    display: none;
+}
+.search-icon i{
+    padding: 0px 10px;
+    color: #e2c743;
+    font-size: 20px;
+    text-decoration: none;
+  
+}
+.search-icon i:hover{
+    color: #c7ab20;
+    /* text-shadow: 1px 1px 5px#b5b5b5; */
+}
+.notification i{
+    padding: 0px 10px;
+    color: #e2c743;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.notification i:hover{
+    color: #c7ab20;
+    /* text-shadow: 1px 1px 3px#b5b5b5; */
+}
+.logout i{
+    padding: 0px 10px;
+    color: #e2c743;
+    font-size: 20px;
+    text-decoration: none;
+}
+.logout i:hover{
+    color: #c7ab20;
+    /* text-shadow: 1px 1px 3px#b5b5b5; */
+    transition: 0.4s;
+}
+.setting i{
+    padding: 0px 10px;
+    color: #e2c743;
+    font-size: 20px;
+    text-decoration: none;
+}
+.setting i:hover{
+    color: #c7ab20;
+    /* text-shadow: 1px 1px 3px#b5b5b5; */
+    transition: 0.4s;
+}
+.profile-img{
+    margin: 0px 10px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #e2c743;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-img:hover{
+    border: 2px solid #ddbe22;
+    /* box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.16); */
+    transition: 0.4s;
+}
+
+.card{
+
+    width: 320px;
+    height: auto ;
+    border-radius: 5px;
+	border: none;
+	margin: 10px 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 #a3a3a3;
+
+}
+.card:hover{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 #e2c743;
+    transition: 0.4s;
+
+}
+.card .card-image{
+    width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+
+}
+.card .card-image img{
+    width: 100%;
+    height: 250px;
+    border-radius: /*15px 15px 0px*/ 5px 5px 0 0;
+    object-fit: cover;
+}
+.card .card-detail img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin: 10px 10px;
+	display: inline; 
+
+}
+.card .react-num-cnt{
+	margin: 20px 10px;
+	display: inline;
+	float: right;
+}
+.card .user-name {
+	color: #262524;
+	font-weight: 600; 
+	display: inline;
+	text-decoration: none;
+		
+}
+.card .user-name:hover{
+	color:#3461a8;
+	text-decoration: none;
+}
+.react-icon i{
+	
+	color: grey;
+}
+.react-icon i:hover{
+	color: #c94b42;
+}
+.card .react-num {
+	display: inline;
+}

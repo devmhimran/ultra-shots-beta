@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+/* COMMON COLORS
+#e2c743
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.mobile-footer{
+    display: none;
+  }
+  .section-footer{
+      margin-top: 150px;
+    background-color: #262524;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .section-footer .main-footer-logo img{
+    width: 45%;
+  }
+  .section-footer .footer-logo span{
+    color: #5E888C;
+  }
+  /* .section-footer a:hover{
+    color: #e2c743!important;
+    transition: 0.4s;
+  } */
+  .social-icon{
+    border: 1px solid #e2c743;
+    border-radius: 1px;
+    
+    text-decoration: none;
+    padding: 4px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s;
+  
+  }
+  .social-icon1 {
+    color:#e2c743;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+  .social-icon1:hover {
+    background-color:#e2c743;
+    color:#262524;
+    text-decoration: none;
+    transition:  all 0.4s ease;
+  }
+.second-row ul li a{
+    color: #fff;
+
+}
+.second-row ul li a:hover{
+    color: #e2c743;
+}
+.third-row ul li a{
+    color: #fff;
+}
+.third-row ul li a:hover{
+    color: #e2c743;
+}
+
+  
+  @media screen and (max-width: 900px){
+    .logo img{
+      margin-top: 30px;
+      width: 23%;
+      float: left;
+    }
+    .mobile-footer{
+      display: none;
+      background-color: #262524;
+      padding-bottom: 40px ;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .upperhead{
+      display: none;
+    }
+    .logo img{
+      margin-top: 30px;
+      width: 40%;
+      float: left;
+    }
+    .section-footer{
+      display: none;
+      background-color: #262524;
+      padding-bottom: 40px ;
+    }
+    .mobile-footer{
+  
+      display: block;
+      margin: auto;
+  
+    }
+    .mobile-footer .footer-logo{
+      text-align: center;
+    }
+    .mobile-footer .footer-logo img{
+      width: 40%;
+      margin: 0px auto 20px;
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    .mobile-footer .social-part{
+      text-align: center;
+    }
+    .mobile-footer .footer-copyright{
+      text-align: center;
+    }
+  
+  }

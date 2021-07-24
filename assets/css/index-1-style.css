@@ -1,0 +1,61 @@
+
+.card{
+
+    width: 320px;
+    height: 290px ;
+    border-radius: 5px;
+	border: none;
+	margin: 10px 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 #a3a3a3;
+
+}
+.card:hover{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 #e2c743;
+    transition: 0.4s;
+
+}
+.card .card-image{
+	object-fit: cover;
+	overflow: hidden;
+
+}
+.card .card-image img{
+	width: 100%;
+    border-radius: /*15px 15px 0px*/ 5px;
+    object-fit: cover;
+}
+.card .card-detail img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin: 10px 10px;
+	display: inline; 
+
+}
+.card .react-num-cnt{
+	margin: 20px 10px;
+	display: inline;
+	float: right;
+}
+.card .user-name {
+	color: #262524;
+	font-weight: 600; 
+	display: inline;
+	text-decoration: none;
+		
+}
+.card .user-name:hover{
+	color:#3461a8;
+	text-decoration: none;
+}
+.react-icon i{
+	
+	color: grey;
+}
+.react-icon i:hover{
+	color: #c94b42;
+}
+.card .react-num {
+	display: inline;
+}

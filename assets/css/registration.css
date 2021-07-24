@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 120vh;
+    background: url(../img/images/log-in-bg.jpg);
+    background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+    background-position:  center center;
+}
+.reg{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.reg img{
+    width: 220px;
+    margin: 0px auto 0px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+   
+}
+.card{
+    margin-top: 50px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 #a3a3a3;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    width: 650px;
+    /* height: 625px; */
+    height: auto;
+    border-radius: 0 ;
+
+}
+.log-in-form{
+    /* position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%,-50%); */
+}
+.card-body .log-in-name h2{
+    margin: 5px auto 20px;
+    display: flex;
+    justify-content: center;
+}
+.card-body .form-group{
+    border-bottom: 2px solid #e2c743;
+    margin-bottom: 15px !important;
+}
+.card-body input[type="text"],
+.card-body input[type="password"]{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 5px;
+    background: none;
+    color: #262524;
+    font-family: 'Raleway';
+}
+.card-body input[type="text"]:focus{
+    background-color: #f5f5f5;
+
+}
+.card-body input[type="password"]:focus{
+    background-color:#f5f5f5;
+}
+.card-body .invailed-msg{
+    font-size: 12px;
+    color: #cc3f46;
+}
+.card-body .login-btn{
+    border: none;
+    outline: none;
+    background-color: #e2c743;
+    color: white;
+    padding: 8px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 2px 2px;
+    cursor: pointer;
+    font-family: 'Raleway';
+}
+.card-body .login-btn:hover{
+    background-color: #ceb431;
+    transition: 0.4s;
+}
+.reg .card-body .user_bio{
+    border: none !important;
+    outline: none !important;
+}
+.reg .card-body .user_bio:focus{
+    border: none !important;
+    outline: none !important;
+}
