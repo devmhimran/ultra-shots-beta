@@ -123,9 +123,10 @@ main{
 
 }
 .card:hover{
+    position: relative;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 #e2c743;
     transition: 0.4s;
-
+    color: #262524;
 }
 .card .card-image{
 	object-fit: cover;
@@ -135,7 +136,7 @@ main{
 .card .card-image img{
 	width: 100%;
   height: 250px;
-  border-radius:  5px 5px 0 0 ;
+  border-radius:  5px;
   object-fit: cover;
 }
 .card .user-card-image img{
@@ -150,9 +151,17 @@ main{
 	object-fit: cover;
 	border-radius: 50%;
 	margin: 10px 10px;
-	display: inline; 
+	display: inline;
 
 }
+/*.overlay{
+  color: #262524;
+  opacity: 1;
+}
+.overlay:hover{
+  color: #262524;
+  opacity: 0.4;
+}*/
 .card .react-num-cnt{
 	margin: 20px 10px;
 	display: inline;
@@ -175,6 +184,23 @@ main{
 }
 .react-icon i:hover{
 	color: #c94b42;
+}
+.profile-card-btn-grp{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+border: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.profile-card-btn{
+  padding: 8px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+.profile-card-btn:hover{
+  color: #e2c743;
 }
 .card .react-num {
 	display: inline;

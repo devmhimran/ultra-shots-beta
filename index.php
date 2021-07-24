@@ -87,10 +87,10 @@
                         <img src="assets/img/user_img/<?php echo $post_obj['user_photo'];  ?>">
                         <a href="user.php?id=<?php echo $post_obj['user_username'] ?>">
                             <p class="user-name"><?php echo $post_obj['user_name']; ?></p></a>
-                       <!--  <div class="react-num-cnt float-right">
-                            <a class="react-icon" href="#"><i class="fas fa-heart"></i></a>
-                            <p class="react-num text-muted ">20</p>
-                        </div> -->
+                        <div class="react-num-cnt float-right">
+                            <a class="react-icon" href="assets/img/user_post/<?php echo $db_all_photo['post_photo'];  ?>" download><i class="fas fa-arrow-down"></i></a>
+                            
+                        </div>
                    
                     </div>
                     </div>

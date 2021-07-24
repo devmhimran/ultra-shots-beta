@@ -154,18 +154,26 @@ if(isset($_POST['upload_photo'])){
             
             <?php foreach($object as $db_photo): ?>
             <div class="col-md-4">
-                <div class="card">
+              <div class="card">
+                <div class="overlay">
                     <div class="card-image">
                         <a href="assets/img/user_post/<?php echo $db_photo['post_photo'];  ?>" data-lightbox="mygallary"><img src="assets/img/user_post/<?php echo $db_photo['post_photo'];  ?>"></a>
                     </div>
-                    <a class="logout mt-1 mb-1 w-25" href="delete.php?id=<?php echo $db_photo['post_photo']; ?>"><i class="far fa-trash-alt"></i></a>
+                    <div class="profile-card-btn-grp">
+                        <a class="profile-card-btn mt-1 mb-1" href="delete.php?id=<?php echo $db_photo['post_photo']; ?>"><i class="far fa-trash-alt"></i></a>
+                        <a class="profile-card-btn mt-1 mb-1" href="assets/img/user_post/<?php echo $db_photo['post_photo'];  ?>" download><i class="fas fa-arrow-down"></i></a>
+                    </div>
+                </div>
+                
+                  
+                    
+
                 </div>
             </div>
             <?php endforeach; ?>     
             </div>
               
 
-            
             
 
 
