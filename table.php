@@ -32,6 +32,7 @@
       <th scope="col">User Bio</th>
       <th scope="col">User Password</th>
       <th scope="col">Photo</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
@@ -47,7 +48,7 @@
       <td><?php echo $document["user_bio"]; ?></td>
       <td><?php echo $document["user_password"]; ?></td>
       <td><img src="assets/img/user_img/<?php echo $document["user_photo"]; ?>" style="width:60px;" alt=""></td>
-
+      <td><a class="btn btn-primary btn-sm" href="user.php?id=$doc['user_id'];">Delete</a></td>
     </tr>
 <?php  endforeach; ?>
   </tbody>

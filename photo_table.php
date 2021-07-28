@@ -29,7 +29,8 @@
       <th scope="col">User Name</th>
       <th scope="col">User Email</th>
       <th scope="col">User Address</th>
-
+      <th scope="col">View User</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
@@ -42,6 +43,7 @@
       <td><?php echo $doc["user_id"]; ?></td>
       <td><?php echo $doc["upload_at"]; ?></td>
       <td><img src="assets/img/user_post/<?php echo $doc["post_photo"]; ?>" style="width:60px;" alt=""></td>
+      
 
     </tr>
 <?php  endforeach; ?>

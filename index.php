@@ -40,15 +40,32 @@
 <body>
     
     <!-- ===== NAV BAR START ===== -->
-    <div class="container">
-        <div class="navbar">
-            <div class="nav-logo">
-                <a href="index.php"><img src="assets/img/logo/ultra-Shots-black.png" alt=""></a>
+    
+
+
+
+    <div class=" container p-3">
+        <div class="nav row">
+            <div class="col-md-3">
+                <a href="index.php"><img style="width: 220px;" src="assets/img/logo/ultra-Shots-black.png" alt=""></a>
             </div>
-            <div class="nav-items">               
-                    <input id="search-box" class="search-box" type="text" placeholder="Search">
+            <div class="col-md-6 selector">
+                <form  action="show.php" method = "POST" enctype='multipart/form-data'>
+                      <select class="form-control form-control-sm " aria-label="Default select example" name="category">
+                          <option selected>Uncategorized</option>
+                            <option value="Wild Life">Wild Life</option>
+                            <option value="Nature">Nature</option>
+                            <option value="Sports / Action">Sports / Action</option>
+                            <option value="Landscape">Landscape</option>
+                          </select>
+                          <input class="btn btn-warning btn-sm" type="submit" name="submit">
+                    </form>
+            </div>
+            <div class="col-md-3">
+                <!-- <input id="search-box" class="search-box" type="text" placeholder="Search"> -->
                     <!-- <a id="search" class="search-icon" href="#"><i  class="fas fa-search"></i></a>               -->
                     <!-- <a class="notification" href="#"><i class="fas fa-bell"></i></a> -->
+                    
                     <a href="profile.php"><img class="profile-img" src="assets/img/user_img/<?php echo $_SESSION['user_photo'];?>"></a>
                     <a class="logout" id="dropdown" href="?logout=user-logout"><i class="fas fa-sign-out-alt"></i></a>
                     <a class="setting" href="#"><i class="fas fa-cog"></i></a>        
@@ -61,10 +78,18 @@
     <div class="container">
         <div class="row">
             <?php 
-
-             $all_photos=$db->post_photo;
+            $all_photos=$db->post_photo;
+            if(isset($_POST['submit'])){
+            $category = $_POST['category'];
+             $object=$all_photos->find(
+                ['category' => $category ]
+               ); 
+        }else{
              $object=$all_photos->find();
-              
+
+        }
+             
+            
             foreach($object as $db_all_photo):
             ?>
 
@@ -73,9 +98,9 @@
                     $post_user_id = $db_all_photo['user_id'];
                     $post_user=$db->profile;
                     $post_obj= $post_user->findOne(
-                    ['_id' =>$post_user_id],
+                    ['user_username' =>$post_user_id],
                 );
-
+                $num_profile = $all_photos->count();
                 ?>
 
             <div class="col-md-4">

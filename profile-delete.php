@@ -3,11 +3,22 @@
 	
 	include('db/db.php');
 	
-	$id = $_GET['id'];
+			$profile = $_GET['id'];
+             $post_db=$db->profile;
+             $obj=$post_db->deleteOne(
+              ['user_username' => $profile],
+          );
 
-	 $sql ="DELETE FROM user_data WHERE id='$id'" ;
-	 $conn -> query($sql);
-	header('location:log-in.php');
+
+             $user_id = $_GET['id'];
+             $post_db=$db->post_photo;
+             $obj=$post_db->deleteOne(
+              ['user_id' => $user_id],
+          );
+
+
+    // session_destroy();
+	header('location: log-in.php');
 
 
 ?>

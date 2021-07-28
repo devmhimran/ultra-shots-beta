@@ -117,7 +117,7 @@
                 
               <div class="row">
             <?php 
-            $photo = $obj['_id'];
+            $photo = $obj['user_username'];
              $post_user_db=$db->post_photo;
              $obj=$post_user_db->find(
               ['user_id' => $photo ],

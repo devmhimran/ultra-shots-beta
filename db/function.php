@@ -1,6 +1,6 @@
 <?php 
 include 'db.php';
-
+include 'vendor/autoload.php';
 function old($recover){
 	if (isset($_POST[$recover])) {
 		echo $_POST[$recover];
@@ -47,20 +47,23 @@ function photo_upload($files, $location , $format=['jpg','png','jpeg']){
 // username function
 // -------------------------------
 
- function unique_check($connection,$coloumn, $table_name, $coloumn_data){
+ // function unique_check($db_data,$doc_name){
 
-  $username_check_sql = "SELECT $coloumn FROM  $table_name WHERE $coloumn = '$coloumn_data'";
-   $data_row = $connection -> query($username_check_sql);
-    $row  = $data_row -> num_rows;
-    if ( $row > 0) {
-      return false;
+ //                    $check=$db->profile;
+ //                    $unique_check = $check->findOne(
+ //                    [$db_data =>$doc_name],
+ //                );
+ //                    $num_docs = $connection->count();
+ //                    if ( $num_docs > 0) {
+ //                      return false;
       
-    }else{
-      return true;
+ //                    }else{
+ //                    return true;
       
-    }
+ //    }
 
- } 
+
+ // } 
  // end of username function
 // -------------------------------
 

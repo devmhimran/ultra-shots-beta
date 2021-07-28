@@ -16,7 +16,7 @@
     header("location:log-in.php");
   }
 
-    $log_in_user = $_SESSION['id'];
+    $log_in_user = $_SESSION['user_username'];
       $collection=$db->post_photo;
       $object=$collection->find(
       ['user_id' => $log_in_user],
@@ -37,11 +37,13 @@
 
 
 if(isset($_POST['upload_photo'])){
-    $user_id = $_SESSION['id'];
+  $category = $_POST['category'];
+    $user_id = $_SESSION['user_username'];
     // Photo validation + Upload DataBase
            // -----------------------------------
            $post_photo = photo_upload($_FILES['user_post'],'assets/img/user_post/');
            $photo_data = $post_photo['file_name'];
+
            $upload_at = date("Y-m-d");
            if ( $post_photo['status'] == 'yes' ) {
 
@@ -54,7 +56,9 @@ if(isset($_POST['upload_photo'])){
                         [
                             "post_photo"=>$photo_data,
                             "user_id"=>$user_id,
-                            "upload_at"=>$upload_at
+                            "upload_at"=>$upload_at,
+                            "category"=>$category,
+                            // "tag"=>'images'
                             
                         ]
                     );
@@ -118,8 +122,8 @@ if(isset($_POST['upload_photo'])){
                     <a class="setting dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-cog"></i></a>   
                     <div class="dropdown">
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <a href="update.php?id=<?php echo $_SESSION['id'] ;?>" class="dropdown-item" type="button">Update Account</a>
-                      <a href="profile-delete.php?id=<?php echo $_SESSION['id'] ;?>" class="dropdown-item" type="button">Delete Account</a>
+                     <!--  <a href="update.php?id=<?php echo $_SESSION['id'] ;?>" class="dropdown-item" type="button">Update Account</a> -->
+                      <a href="profile-delete.php?id=<?php echo $_SESSION['user_username'] ;?>" class="dropdown-item" type="button">Delete Account</a>
                     </div>
                 </div>     
             </div>
@@ -202,6 +206,15 @@ if(isset($_POST['upload_photo'])){
       <form action="<?php $_SERVER['PHP_SELF']?>" method = "POST" enctype='multipart/form-data'>
       <div class="modal-body">
       <input type="file" name="user_post" >
+      </div>
+      <div class="selector p-2">
+        <select class="form-select" aria-label="Default select example" name="category">
+      <option value="Uncategorized">Uncategorized</option>
+        <option value="Wild Life">Wild Life</option>
+        <option value="Nature">Nature</option>
+        <option value="Sports / Action">Sports / Action</option>
+        <option value="Landscape">Landscape</option>
+      </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>

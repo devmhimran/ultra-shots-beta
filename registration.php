@@ -18,7 +18,17 @@ $user_confirm_password = $_POST['user_confirm_password'];
                 
      // username check
     // -------------------------------
-    //  $unique_username_check =  unique_check($conn,'user_username', 'user_data', $user_username);
+                    $check=$db->profile;
+                    $unique_check = $check->findOne(
+                    ['user_username' => $user_username]
+                );
+
+                $num_username = $check->count(['user_username' => $user_username]);
+                if($num_username > 0){
+                    $unique_username_check = false;
+                }else{
+                    $unique_username_check = true;
+                }
      // email check
     // -------------------------------
     //   $unique_email_check =  unique_check($conn,'user_email', 'user_data', $user_email);
@@ -53,11 +63,11 @@ $user_confirm_password = $_POST['user_confirm_password'];
         $valid_confirm_password = "<p class='invailed-msg'>Enter Password</p>";
       }
 
-    //   if ($unique_username_check == false ) {   
-    //             $valid_username =  "<p class='invailed-msg'>Username already exists</p>";
+      // if ($unique_username_check == false ) {   
+      //           $valid_username =  "<p class='invailed-msg'>Username already exists</p>";
                 
                 
-    //         }
+      //        }
             
     //         if( $unique_email_check == false){
     //             $valid_email =  "<p class='invailed-msg'>Email already exists</p>";
@@ -73,13 +83,11 @@ $user_confirm_password = $_POST['user_confirm_password'];
      // -------------------------------
      if(empty($user_name )  || empty( $user_username) || empty($user_email) || empty($user_address) || empty($user_bio) || empty($user_password)){
          $valid[] =  "<p class='alert alert-danger'>All fields are required<button class='close' data-dissmiss='alert'>&times;</button></p>";
-        //  }elseif ($unique_username_check == false) {
-        //         $valid[] =  "<p class='alert alert-warning'>Couldn't Sign In !<button class='close' data-dissmiss='alert'>&times;</button></p>";
-                // $valid_username =  "<p>Username already exits</p>";
-        //  }elseif ($unique_email_check == false) {
-        //     $valid[] =  "<p class='alert alert-warning'>Couldn't Sign In !<button class='close' data-dissmiss='alert'>&times;</button></p>";
-            $valid_email =  "<p>Email already exits</p>";
-         }elseif ($password_check == false) {
+         }elseif ($unique_username_check == false) {
+                $valid[] =  "<p class='alert alert-warning'>Couldn't Sign In !<button class='close' data-dissmiss='alert'>&times;</button></p>";
+                $valid_username =  "<p>Username already exits</p>";
+            }
+        elseif ($password_check == false) {
             $valid[] =  "<p class='alert alert-warning'>Couldn't Sign In !<button class='close' data-dissmiss='alert'>&times;</button></p>";
             $valid_pass =  "<p>Password doesn't match</p>";
             }else{

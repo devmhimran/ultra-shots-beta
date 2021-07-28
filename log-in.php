@@ -22,6 +22,7 @@ if (isset($_POST['log_in'])) {
     $valid =  "<p class='invailed-msg'>All fields are required<button style='color:red;' class='close' data-dissmiss='alert'>&times;</button></p>";
 
    }else{
+    // Database Username
     $collection=$db->profile;
 	$db_user_detail=$collection->findOne(
         ['user_username' => $username],

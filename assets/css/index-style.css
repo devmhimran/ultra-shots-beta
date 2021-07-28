@@ -2,11 +2,21 @@
     height: 100px;
     padding: 0 20px;
 }
+.nav{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .navbar .nav-logo img{
     width: 220px;
 }
 .nav-items {
     
+}
+.selector select{
+    width: 350px;
+    display: inline-block;
 }
 .nav-items .search-box{
     border: 2px solid #e2c743;
@@ -15,6 +25,13 @@
     padding: 10px;
     margin: 0px auto 0px;
     display: none;
+}
+.hero-area{
+    padding: 100px 0px;
+    background-color: #e2c743;
+}
+.hero-area-text{
+    text-align: center;
 }
 .search-icon i{
     padding: 0px 10px;
