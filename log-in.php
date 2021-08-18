@@ -52,7 +52,7 @@ if (isset($_POST['log_in'])) {
             $_SESSION['user_photo'] = $db_user_detail["user_photo"];
             $_SESSION['user_address'] = $db_user_detail["user_address"];
             $_SESSION['user_email'] = $db_user_detail["user_email"];
-            $_SESSION['user_bio'] = $db_user_detail["user_name"];
+            $_SESSION['user_bio'] = $db_user_detail["user_bio"];
             $_SESSION['user_password'] = $db_user_detail["user_password"];
             header("location:profile.php");
         }else{
